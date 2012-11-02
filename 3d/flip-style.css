@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.flip-container{
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	perspective: 800px;
+	width: 200px;
+	height: 260px;
+	position: relative;
+	border: 1px solid #ccc;
+}
+#card{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+
+	-webkit-transition: -webkit-transform 1s;
+	-moz-transition: -moz-transform 1s;
+	transition: transform 1s;
+
+	transform-origin: right center;
+	-webkit-transform-origin: right center;
+	-moz-transform-origin: right center;
+}
+figure{
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 140px;
+	text-align: center;
+	line-height: 260px;
+	color: white;
+
+}
+#card .front{
+	background: red;
+}
+#card .back{
+	background: blue;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	
+}
+#card.flipped{
+	-webkit-transform: translateX(-100%) rotateY(-180deg);
+	-moz-transform: translateX(-100%) rotateY(-180deg);
+	-o-transform: translateX(-100%) rotateY(-180deg);
+	-ms-transform: translateX(-100%) rotateY(-180deg);
+	transform: translateX(-100%) rotateY(-180deg);
+	
+
+}

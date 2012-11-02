@@ -1,0 +1,24 @@
+.flip-container{
+	width: 150px;
+	height: 150px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	z-index: 1;
+}
+
+.flip-note{
+	z-index: 10;
+	height: 100px;
+	width: 120px;
+	perspective: 600px;
+	-webkit-perspective: 600px;
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+	background-color: blue;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	filter:alpha(opacity=5);
+}
