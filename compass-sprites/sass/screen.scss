@@ -6,8 +6,11 @@
 
 $campaign-icons: sprite-map("campaign/*.png");
 
-.inline li a {
-	@extend .ir;
+.inline li {
+	vertical-align: middle;
+	a {
+		@extend .ir;	
+	}
 }
 
 $collection: one, two, three, four, five, six, seven, eight;
