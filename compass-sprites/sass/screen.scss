@@ -1,0 +1,19 @@
+@import "compass/reset";
+@import "campaign/*.png";
+@include all-campaign-sprites;
+
+.ir { display: block; overflow: hidden; text-indent: 102%; white-space: nowrap; }
+
+$campaign-icons: sprite-map("campaign/*.png");
+
+.inline li a {
+	@extend .ir;
+}
+
+$collection: one, two, three, four, five, six, seven, eight;
+
+@each $name in $collection {
+	.inline li.campaign-#{$name} a {
+		@include sprite-dimensions($campaign-icons, #{$name});
+	}	
+}
